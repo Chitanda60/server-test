@@ -6,7 +6,7 @@ import querystring from 'querystring';
 
 // 应用根路径
 let localhost = 'http://10.1.133.143:3000'
-let root = '/Users/wukeyu/WebstormProjects/server-test/web/app'
+let root = '/Users/wukeyu/WebstormProjects/server-test/web/template'
 
 let tempMessage = {
     name: 'shemei',
@@ -19,7 +19,7 @@ let tempDate = {
 http.createServer((req, res) => {
     if (req.url === '/message' || req.url === '/date' || req.url === '/authentication') {
         // 处理请求
-        let text = ''
+        let text = ''        
         switch (req.method)  {
             case 'POST':
                 postAuthentication(req, res);
@@ -77,7 +77,7 @@ const resolvePreRequest = (req, res)=> {
 const getMessage = (req, res) => {
     res.writeHead(200, {
         'Content-Type':'text/html;charset=utf-8',
-        'Access-Control-Allow-Origin':localhost,
+        'Access-Control-Allow-Origin': '*',
     })
     res.end(JSON.stringify(tempMessage));
 }
