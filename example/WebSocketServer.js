@@ -4,6 +4,8 @@ var socketServer = new WebSocketServer({ port: 3001 });
   
 //to store all connected clients  
 var clients = [];  
+
+
   
 socketServer.on('connection', function(socket) {  
   
