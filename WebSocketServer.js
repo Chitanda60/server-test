@@ -17,9 +17,9 @@
 // })
 
 // 测试服务器
-var WebSocketServer = require('ws').Server;  
+var WebSocketServer = require('ws').Server;
 var socketServer = new WebSocketServer({ port: 3001 });
-  
+
 //to store all connected clients  
 var clients = [];
 

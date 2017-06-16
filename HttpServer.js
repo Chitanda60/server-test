@@ -5,7 +5,7 @@ import fs from 'fs'
 import querystring from 'querystring';
 
 // 应用根路径
-let localhost = 'http://10.1.133.143:3000'
+let localhost = 'http://10.1.135.18:1801'
 let root = '/Users/wukeyu/WebstormProjects/server-test/web/template'
 
 let tempMessage = {
@@ -29,8 +29,11 @@ http.createServer((req, res) => {
             case 'PUT':
                 break
             case 'GET':
-                getMessage(req, res)
-                getDate(req, res)
+                if (req.url === '/message') {
+                    getMessage(req, res)
+                } else if (req.url === '/date') {
+                    getDate(req, res)
+                }
                 break
             case 'OPTIONS':
                 resolvePreRequest(req, res)
@@ -59,8 +62,9 @@ http.createServer((req, res) => {
     //     'Content-Type':'text/plain;charset=utf-8'
     // })
     // res.end(text);
-}).listen(3000)
-console.log('Server running')
+}).listen(1801, function(){
+    console.log('Server running in 1801')
+})
 
 // 处理预检请求
 const resolvePreRequest = (req, res)=> {
@@ -85,7 +89,9 @@ const getMessage = (req, res) => {
 // getDate request
 const getDate = (req, res) => {
     res.writeHead(200, {
-        'Content-Type':'text/html;charset=utf-8',        
+        'Content-Type':'text/html;charset=utf-8',
+        // 允许访问的origin
+        'Access-Control-Allow-Origin': '*',
     })
     res.end(JSON.stringify(tempDate));
 }

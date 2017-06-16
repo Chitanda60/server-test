@@ -1,40 +1,27 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/Users/wukeyu/.nvm/versions/node/v4.3.2/bin/node',
-1 verbose cli   '/Users/wukeyu/.nvm/versions/node/v4.3.2/bin/npm',
+1 verbose cli [ '/Users/wukeyu/.nvm/versions/node/v6.10.0/bin/node',
+1 verbose cli   '/Users/wukeyu/.nvm/versions/node/v6.10.0/bin/npm',
 1 verbose cli   'run',
-1 verbose cli   'http' ]
-2 info using npm@2.14.12
-3 info using node@v4.3.2
-4 verbose run-script [ 'prehttp', 'http', 'posthttp' ]
-5 info prehttp shemei@1.0.0
-6 info http shemei@1.0.0
-7 verbose unsafe-perm in lifecycle true
-8 info shemei@1.0.0 Failed to exec http script
-9 verbose stack Error: shemei@1.0.0 http: `babel-node HttpServer.js`
-9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/Users/wukeyu/.nvm/versions/node/v4.3.2/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at EventEmitter.emit (events.js:172:7)
-9 verbose stack     at ChildProcess.<anonymous> (/Users/wukeyu/.nvm/versions/node/v4.3.2/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at ChildProcess.emit (events.js:172:7)
-9 verbose stack     at maybeClose (internal/child_process.js:821:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-10 verbose pkgid shemei@1.0.0
-11 verbose cwd /Users/wukeyu/WebstormProjects/server-test
-12 error Darwin 16.1.0
-13 error argv "/Users/wukeyu/.nvm/versions/node/v4.3.2/bin/node" "/Users/wukeyu/.nvm/versions/node/v4.3.2/bin/npm" "run" "http"
-14 error node v4.3.2
-15 error npm  v2.14.12
-16 error code ELIFECYCLE
-17 error shemei@1.0.0 http: `babel-node HttpServer.js`
-17 error Exit status 1
-18 error Failed at the shemei@1.0.0 http script 'babel-node HttpServer.js'.
-18 error This is most likely a problem with the shemei package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     babel-node HttpServer.js
-18 error You can get their info via:
-18 error     npm owner ls shemei
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+1 verbose cli   'dev' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.0
+4 verbose stack Error: missing script: dev
+4 verbose stack     at run (/Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/lib/run-script.js:151:19)
+4 verbose stack     at /Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/lib/run-script.js:61:5
+4 verbose stack     at /Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+4 verbose stack     at checkBinReferences_ (/Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+4 verbose stack     at final (/Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+4 verbose stack     at then (/Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+4 verbose stack     at /Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:311:12
+4 verbose stack     at /Users/wukeyu/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at tryToString (fs.js:455:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:442:12)
+5 verbose cwd /Users/wukeyu/WebstormProjects/server-test
+6 error Darwin 16.5.0
+7 error argv "/Users/wukeyu/.nvm/versions/node/v6.10.0/bin/node" "/Users/wukeyu/.nvm/versions/node/v6.10.0/bin/npm" "run" "dev"
+8 error node v6.10.0
+9 error npm  v3.10.10
+10 error missing script: dev
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
