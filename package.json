@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "http": "babel-node HttpServer.js",
-    "websocket": "babel-node WebSocketServer.js"
+    "http": "babel-node Http2Server.js",
+    "websocket": "babel-node WebSocketServer.js",
+    "websocketio": "babel-node WebSocketWithIOServer.js"
   },
   "author": "shemei",
   "license": "ISC",
@@ -13,8 +14,11 @@
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-2": "^6.18.0",
+    "express": "^4.15.4",
     "history": "^4.5.1",
     "koa": "^1.2.4",
+    "socket.io": "^2.0.3",
+    "spdy": "^3.4.7",
     "ws": "^1.1.1"
   }
 }
